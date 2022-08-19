@@ -116,6 +116,11 @@ body {
   /* width: 500px; */
 }
 
+.leaflet-popup-content {
+  text-align: center;
+  font-weight: 700;
+}
+
 @media(max-width:860px) {
   .header__input--button {
     width: 5vw;
@@ -129,7 +134,7 @@ body {
 @media(max-width:800px) {
   #data {
     flex-direction: column;
-    height: 35vh;
+    height: 240px;
     width: 80vw;
     left: 10%;
     top: 25vh;
