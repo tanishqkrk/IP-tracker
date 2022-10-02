@@ -10,6 +10,14 @@ body {
 
 }
 
+.warning {
+  background-color: rgb(255, 174, 174);
+  color: rgb(88, 0, 0);
+  font-weight: 800;
+  font-size: 14px;
+  text-align: center;
+}
+
 #header {
   height: 40vh;
   background: url(./images/pattern-bg.png);
@@ -161,6 +169,10 @@ body {
   #data {
     width: 90vw;
     left: 5%;
+  }
+
+  .warning {
+    display: none;
   }
 }
 
