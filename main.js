@@ -21,7 +21,6 @@ const outerFunction = () => {
         }
 
         const update = (data) => {
-            console.log(data);
             const updateMap = () => {
                 let x = data.location.lat;
                 let y = data.location.lng;
