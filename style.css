@@ -142,7 +142,7 @@ body {
 @media(max-width:800px) {
   #data {
     flex-direction: column;
-    height: 240px;
+    height: 290px;
     width: 80vw;
     left: 10%;
     top: 25vh;

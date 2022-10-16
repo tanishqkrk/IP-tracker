@@ -6,8 +6,9 @@ const outerFunction = () => {
         let userLocation = document.querySelector('.location__value');
         let userTimezone = document.querySelector('.timezone__value');
         let userIsp = document.querySelector('.isp__value');
-        const apiKey = 'at_Afae2z1wztB5f4gRmhht2iZPnyeG3';
-        const URL = `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ipAddress}`;
+        let userVpn = document.querySelector('.vpn__value');
+        const apiKey = 'at_ptq5iCtbeeu2pV1kxSlEAZ43nLKYS';
+        const URL = `https://geo.ipify.org/api/v2/country,city,vpn?apiKey=${apiKey}&ipAddress=${ipAddress}`;
         console.log(URL);
         fetch(URL).then(response => response.json())
             .then(data => update(data))
@@ -37,6 +38,18 @@ const outerFunction = () => {
             userLocation.innerHTML = data.location.city
             userTimezone.innerHTML = data.location.timezone
             userIsp.innerHTML = data.isp
+            if (data.proxy.proxy == true) {
+                userVpn.innerHTML = 'Proxy'
+            }
+            else if (data.proxy.vpn == true) {
+                userVpn.innerHTML = 'VPN'
+            }
+            else if (data.proxy.tor == true) {
+                userVpn.innerHTML = 'Tor'
+            }
+            else {
+                userVpn.innerHTML = '-'
+            }
             updateMap();
         }
     }
